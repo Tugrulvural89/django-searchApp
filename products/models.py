@@ -28,6 +28,7 @@ class ProductQuerySet(models.query.QuerySet):
         return self.filter(featured=True)
 
     def search(self, query):
+        #you can update icontains specs as you wish title__slug__icontains etc.
         lookups = (Q(title__icontains=query) |
                    Q(descriptios__icontains=query) |
                    Q(tag__title__icontains=query))
