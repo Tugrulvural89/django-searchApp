@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{{ query }} {# query defined as search keyword in views and models #}
+
+{% for x in object_list %}
+    <h2>{{ x.title }}</h2>
+    <img src="{{ x.image.url }}" width="100px" height="100px"/>
+    <p>{{ x.price }}</p>
+    <p>{{ x.descriptios }}</p>
+    <p><a href="{{ x.get_absolute_url }}">incele</a></p>
+{% endfor %}
+
+</body>
+</html>
