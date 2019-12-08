@@ -7,6 +7,6 @@ Add settings file 'products', 'search',  'tags'
 
 Add include url for products and search app 
 
-# path('products/',include("products.urls")),
-# path('search/', include("search.urls")),
+path('products/',include("products.urls")),
+path('search/', include("search.urls")),
 
